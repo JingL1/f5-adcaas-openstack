@@ -4,6 +4,9 @@ cdir=`cd $(dirname $0); pwd`
 
 target=$cdir/../dist
 
+echo $cdir
+echo $target
+
 mkdir -p $target
 rm -rf $target/*
 
