@@ -1,7 +1,7 @@
 env:
   global:
   - DIST_REPO="dist"
-  - PKG_RELEASE=f5-adcaas-openstack-$(git describe --tags).tar.gz
+  - PKG_RELEASE="f5-adcaas-openstack-$(git describe --tags --abbrev=0).tar.gz"
 
 script:
 - scripts/build_dist.sh
@@ -12,7 +12,7 @@ deploy:
     api_key:
       secure: "$GITHUB_TOKEN"
     file:
-      - abcd.tar.gz
+      - ${PKG_RELEASE}
     skip_cleanup: true
     overwrite: true
     on:
