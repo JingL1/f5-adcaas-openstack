@@ -4,14 +4,14 @@ env:
 
 script:
 - scripts/build_dist.sh
-- tar cvzf abc.tar.gz dist
-- cp abc.tar.gz dist/
+- tar cvzf abcd.tar.gz dist
+- cp abcd.tar.gz dist/
 deploy:
   - provider: releases
     api_key:
       secure: "$GITHUB_TOKEN"
     file:
-      - abc.tar.gz
+      - abcd.tar.gz
     skip_cleanup: true
     overwrite: true
     on:
