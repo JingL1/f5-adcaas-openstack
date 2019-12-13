@@ -1,11 +1,12 @@
 env:
   global:
   - DIST_REPO="dist"
+  - PKG_RELEASE=f5-adcaas-openstack-$(git describe --tags --abbrev=0).tar.gz
 
 script:
 - scripts/build_dist.sh
-- tar cvzf abcd.tar.gz dist
-- cp abcd.tar.gz dist/
+- tar cvzf ${PKG_RELEASE} dist
+- cp ${PKG_RELEASE} dist/
 deploy:
   - provider: releases
     api_key:
