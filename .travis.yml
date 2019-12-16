@@ -17,4 +17,5 @@ deploy:
     overwrite: true
     on:
       repo: JingL1/f5-adcaas-openstack
+      branch: release-ci
 #       tags: true
