@@ -1,13 +1,7 @@
 env:
   global:
-  - PKG_RELEASE="f5-adcaas-openstack-$(git describe --tags --abbrev=0).tar.gz"
-  
-before_deploy:
-      # TODO-1: set tags: Set up git user name and tag this commit
-      - git config --local user.name "YOUR GIT USER NAME"
-      - git config --local user.email "YOUR GIT USER EMAIL"
-      - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-      - git tag $TRAVIS_TAG
+  - PKG_RELEASE="0.0.0"
+ 
    
 script:
 - scripts/build_dist.sh
@@ -21,6 +15,6 @@ deploy:
       - ${PKG_RELEASE}
     skip_cleanup: true
     overwrite: true
-#     on:
-#       repo: JingL1/f5-adcaas-openstack
+    on:
+      repo: JingL1/f5-adcaas-openstack
 #       tags: true
