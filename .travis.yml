@@ -1,6 +1,6 @@
 env:
   global:
-  - PKG_RELEASE="0.0.0"
+  - PKG_RELEASE="f5-adcaas-openstack-0.0.0.tar.gz"
  
    
 script:
