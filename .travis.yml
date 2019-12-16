@@ -67,7 +67,7 @@ jobs:
         skip_cleanup: true
         overwrite: true
         on:
-          branch: master
+          # branch: master
           repo: JingL1/f5-adcaas-openstack
           tags: true      
       # Deploy image to Docker Hub
