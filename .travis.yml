@@ -48,9 +48,9 @@ jobs:
         - pip install awscli --upgrade
       script:
         # Rebuild document 
-        # - pushd docs
-        # - ./docker-docs.sh ./test-docs.sh
-        # - popd
+        - pushd docs
+        - ./docker-docs.sh ./test-docs.sh
+        - popd
         # Build release package
         - pushd scripts
         - ./build_dist.sh
