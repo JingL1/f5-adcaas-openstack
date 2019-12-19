@@ -14,9 +14,9 @@ jobs:
       before_script:
         - export PG_HOST=localhost
       script:
-        - npm --prefix app/waf test
-        - npm --prefix app/waf run coverage
-        - npm --prefix app/waf run coveralls
+#         - npm --prefix app/waf test
+#         - npm --prefix app/waf run coverage
+#         - npm --prefix app/waf run coveralls
       deploy:
         provider: script
         on:
